@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        .container {
+            margin-top: 100px;
+        }
+
+        .col-sm-8 img {
+            border-radius: 2%;
+            border-color: black;
+            border-style: solid;
+            border-width: 3px;
+        }
+
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        .con {
+            margin-left: 70px;
+        }
+
+        .form-range {
+            margin-top: 10px;
+        }
+
+        .range-box {
+            margin-left: 5px;
+            margin-top: 10px;
+            width: 30px;
+        }
+
+        .checkbox {
+            margin-top: 10px;
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Three JS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <img src="1.png" class="img-fluid" alt="...">
+            </div>
+            <div class="col-sm-4">
+
+                <h2>Controls</h2>
+
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">hemilrradiance</label>
+                    <div class="con">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                0.0001 lx (Moonless Night)
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">0.0001 lx (Moonless Night)</a>
+                                <a class="dropdown-item" href="#">0.002 lx (Night Airglow)</a>
+                                <a class="dropdown-item" href="#">0.5 lx (Full Moon)</a>
+                                <a class="dropdown-item" href="#">3.4 lx (City Twilight)</a>
+                                <a class="dropdown-item" href="#">50 lx (Living Room)</a>
+                                <a class="dropdown-item" href="#">100 lx (Very Overcast))</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">bulbPower</label>
+                    <div class="con">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                110000 lm (1000W)
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">110000 lm (1000W)</a>
+                                <a class="dropdown-item" href="#">3500 lm (300W)</a>
+                                <a class="dropdown-item" href="#">1700 lm (100W)</a>
+                                <a class="dropdown-item" href="#">800 lm (60W)</a>
+                                <a class="dropdown-item" href="#">400 lm (40W)</a>
+                                <a class="dropdown-item" href="#">180 lm (25W))</a>
+                                <a class="dropdown-item" href="#">20 lm (4W)</a>
+                                <a class="dropdown-item" href="#">Off</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">exposure</label>
+                    <div class="con">
+
+                        <input type="range" class="form-range" name="rangeInput" min="0" max="100"
+                            onchange="updateTextInput(this.value);">
+                        <input type="text" class="range-box" id="textInput" value="50">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">shadows</label>
+                    <div class="con">
+                        <input class="checkbox" type="checkbox" value="option1">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateTextInput(val) {
+            document.getElementById('textInput').value = val;
+        }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
